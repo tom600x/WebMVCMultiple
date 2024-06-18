@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+    // Instantiate an instance of the .NET class module
+    var myClass = new SharedClass.Class1();
+    
+    // Call a method from the class module
+    var result = myClass.GetClassName();
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    
+    <p>Result from MyClass: @result</p>
+</div>
