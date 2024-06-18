@@ -53,10 +53,10 @@ jobs:
             ${{ runner.os }}-nuget-
 
       - name: Build with dotnet
-        run: dotnet build WebMVCMultiple.csproj --configuration Release
+        run: dotnet build  WebMVCMultiple\WebMVCMultiple.csproj --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish WebMVCMultiple.csproj -c -f net8.0 Release -o ${{env.DOTNET_ROOT}}/myapp
+        run: dotnet publish  WebMVCMultiple\WebMVCMultiple.csproj -c -f net8.0 Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
